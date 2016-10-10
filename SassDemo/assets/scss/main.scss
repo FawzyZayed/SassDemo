@@ -1,0 +1,75 @@
+// Owner File Information 
+$ThemeName:"World";
+$ThemeURI:"Company URL";
+$Author: "Fawzy";
+$AuthorURI:"eDigits.net";
+$Description:"Custom Theme for Company";
+$version: "1.0.0";
+$Tags:"New , Custom , Responsive , Bootstarp , Gulp , SCSS , HTML5 , IconFont , Quality , Typography , Javascript , CSS , GoogleFont";
+$TextDomain:"eDigits";
+
+/*
+    Theme Name: #{$ThemeName}
+    Theme URI: #{$ThemeURI}
+    Author: #{$Author}
+    Author URI:#{$AuthorURI}
+    Description: #{$Description}.
+    Version: #{$version}
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags:#{$Tags}
+    Text Domain: #{$TextDomain}
+
+    This theme, is licensed under the GPL.
+    Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+// include Google Fonts 
+    // Open Sans Font
+        @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+    // Exo Font
+        @import url("https://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+// Styles Variable 
+    $GlobalFont : 'Open Sans', sans-serif;
+    $titleFont  : 'Exo', sans-serif;
+    $FontColor  : #000;
+    $TitleColor : #222;
+    $LinkColor  : #ddd;
+
+ 
+// browser prefix
+    @mixin border-radius($radius) {
+      -webkit-border-radius: $radius; /* Safari, Chrome and browsers using the Webkit engine */
+         -moz-border-radius: $radius; /* Firefox and other browsers using Mozilla's browser engine */
+          -ms-border-radius: $radius; /* Internet Explorer (but not always) */ 
+           -o-border-radius: $radius; /* Opera */
+              border-radius: $radius; /* Standard syntax */
+    }
+// Linear Gradient 
+    @mixin Gradients($Direction,$firstColor,$SecondColor) {
+        background: $firstColor; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient($Direction,$SecondColor,$firstColor); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient($Direction,$firstColor,$SecondColor); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient($Direction,$firstColor,$SecondColor); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to $Direction,$firstColor,$SecondColor); /* Standard syntax */
+    }
+// CSS3 Transitions
+    @mixin Transition ($trabsValue){
+         -webkit-transition: $trabsValue; /* Safari, Chrome and browsers using the Webkit engine */
+            -moz-transition: $trabsValue; /* Firefox and other browsers using Mozilla's browser engine */
+             -ms-transition: $trabsValue; /* Internet Explorer (but not always) */ 
+              -o-transition: $trabsValue; /* Opera */
+                 transition: $trabsValue; /* Standard syntax */
+    }
+// Start Style
+body{
+    @include Gradients(left,red,yellow);
+    font-family: $GlobalFont;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $titleFont;
+}
+p{
+    font-family: $GlobalFont;
+}
