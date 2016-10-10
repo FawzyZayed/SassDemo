@@ -1,0 +1,30 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "Project Sass Demo for GitHub",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FawzyZayed/SassDemo.git"
+  },
+  "keywords": [
+    "sass",
+    "reset",
+    "file",
+    "scss"
+  ],
+  "author": "Fawzy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FawzyZayed/SassDemo/issues"
+  },
+  "homepage": "https://github.com/FawzyZayed/SassDemo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "sass-watch": "^0.1.0"
+  }
+}
