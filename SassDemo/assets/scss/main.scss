@@ -102,8 +102,16 @@ $TextDomain:"Fawzy";
         @include Gradients(left,red,yellow);
         font-size: $GlobalFSize;
         // include responsive media phone size
-            @include respond-to(Phones) { font-size: 12px;};
+        @include respond-to($Phones) { font-size: 12px;};
     }
+// heading default style
+    @for $Head from 1 through 6 {
+      h#{$Head} {
+        // your Styles here
+        font-weight: 900;
+      }
+    }
+// another way to include heading file 
     h1,h2,h3,h4,h5,h6{
         font-family: $titleFFamily;
         color:$TitleColor;
